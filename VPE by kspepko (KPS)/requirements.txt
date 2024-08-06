@@ -1,0 +1,9 @@
+flet
+psutil
+requests
+whois
+python-whois
+sounddevice
+pycaw
+pywin32
+wmi
