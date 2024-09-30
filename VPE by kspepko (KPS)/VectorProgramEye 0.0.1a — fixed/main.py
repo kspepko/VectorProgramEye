@@ -284,7 +284,7 @@ def main(page: ft.Page):
                         print(f"{proc['name']} (PID: {proc['pid']})")
                     subprocess.Popen(["python", "NullNotifyfixed.py"])
                 else:
-                    print("Наприятные процессы не обнаружены.")
+                    print("Неприятные процессы не обнаружены.")
             if notifications["micro"] and check_mic_usage():
                 subprocess.Popen(["python", "NullNotifyfixed.py"])
             if notifications["camera (admin)"] and check_camera_status():
@@ -323,7 +323,7 @@ def main(page: ft.Page):
         return camera_in_use
 
     def detect_screen_capture():
-        suspicious_keywords = ["capture", "record", "screen", "obs", "zoom", "trojan", "virus"]
+        suspicious_keywords = ["capture", "record", "screen", "zoom", "trojan", "virus"]
         capture_processes = []
 
         for proc in psutil.process_iter(['pid', 'name']):
