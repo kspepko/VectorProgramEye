@@ -27,7 +27,7 @@ def main(page: ft.Page):
         clipped_icon,
         ft.ElevatedButton("Главная страница", on_click=lambda e: switch_page(e, "home"), color=ft.colors.RED, height=60, width=200, icon=ft.icons.HOME),
         ft.ElevatedButton("Инструменты", on_click=lambda e: switch_page(e, "tools"), icon=ft.icons.BUILD),
-        ft.ElevatedButton("Браузер киллиер", on_click=lambda e: switch_page(e, "browser_killer"), icon=ft.icons.DELETE),
+        ft.ElevatedButton("Браузер инструментарий", on_click=lambda e: switch_page(e, "browser_killer"), icon=ft.icons.DELETE),
         ft.ElevatedButton("Данные ПК", on_click=lambda e: switch_page(e, "pc_data"), icon=ft.icons.COMPUTER),
         ft.ElevatedButton("Протоколы и IP", on_click=lambda e: switch_page(e, "protocols_ip"), icon=ft.icons.NETWORK_WIFI),
         ft.ElevatedButton("WEB-Взаимодействия", on_click=lambda e: switch_page(e, "web_interactions"), icon=ft.icons.PUBLIC),
