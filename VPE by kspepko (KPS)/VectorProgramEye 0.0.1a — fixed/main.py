@@ -168,13 +168,17 @@ def main(page: ft.Page):
         page.update()
 
     def search_ip_data(ip):
-        ip_info = get_ip_info(ip)
         data_column.controls.append(ft.Text(f"DNS: {ip_info.get('hostname', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Город: {ip_info.get('city', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Регион: {ip_info.get('region', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Страна: {ip_info.get('country', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Организация: {ip_info.get('org', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Локация: {ip_info.get('loc', 'N/A')}", selectable=True))
+        data_column.controls.append(ft.Text(f"ASN: {ip_info.get('asn', 'N/A')}", selectable=True))
+        data_column.controls.append(ft.Text(f"Часовой пояс: {ip_info.get('timezone', 'N/A')}", selectable=True))
+        data_column.controls.append(ft.Text(f"ASN-диапазон: {ip_info.get('asn_range', 'N/A')}", selectable=True))
+        data_column.controls.append(ft.Text(f"Тип соединения: {ip_info.get('connection_type', 'N/A')}", selectable=True))
+        data_column.controls.append(ft.Text(f"Описание: {ip_info.get('description', 'N/A')}", selectable=True))
         data_column.controls.append(ft.Text(f"Почтовый индекс: {ip_info.get('postal', 'N/A')}", selectable=True))
         page.update()
 
